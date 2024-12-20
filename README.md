@@ -28,7 +28,6 @@
 
 ![Screenshot 1](https://github.com/Nimnadi99/codeBlog/blob/master/images/a.jpg)
 ![Screenshot 2](https://github.com/Nimnadi99/codeBlog/blob/master/images/c.jpg)
-![Screenshot 3](https://github.com/Nimnadi99/codeBlog/blob/master/images/d.jpg)
 ![Screenshot 4](https://github.com/Nimnadi99/codeBlog/blob/master/images/e.jpg)
 ![Screenshot 5](https://github.com/Nimnadi99/codeBlog/blob/master/images/f.jpg)
 ![Screenshot 6](https://github.com/Nimnadi99/codeBlog/blob/master/images/g.jpg)
