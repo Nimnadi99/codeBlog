@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_margin="4dp">
+
+    <!-- Add a checkbox for delete mode -->
+
+    <CheckBox
+        android:id="@+id/checkboxSelect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:buttonTint="@color/colorAccent"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textViewSender"
+        android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxWidth="388dp"
+    android:padding="2dp"
+    android:text="Sender"
+    android:textColor="#333333"
+    android:textSize="14sp"
+    android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:maxWidth="240dp"
+        android:padding="10dp"
+        android:text="Message"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:fontFamily="sans-serif-medium"
+        android:autoLink="web"
+        android:textStyle="bold"
+        android:linksClickable="true"
+        android:layout_marginStart="8dp"
+        android:textColorLink="#FF0000" />
+    <!-- Add an ImageView for displaying images -->
+    <ImageView
+        android:id="@+id/imageViewAttachment"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_gravity="center" />
+    <!-- Add a Share button to the item_message.xml layout -->
+    <ImageView
+        android:id="@+id/imageViewShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/share_icon"
+        android:clickable="true"
+        android:onClick="onShareButtonClick"
+        android:contentDescription="@string/share_button_description"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMessage"
+        app:tint="@color/colorAccent" />
+
+</LinearLayout>

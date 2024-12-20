@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- list_item_blog.xml -->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <!-- Sender's Name -->
+    <TextView
+        android:id="@+id/textSenderName"
+        android:layout_width="387dp"
+        android:layout_height="wrap_content"
+        android:textAllCaps="true"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- Blog Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/textSenderName"
+        android:text="Blog Title"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <!-- Blog Image -->
+    <ImageView
+        android:id="@+id/imageBlog"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_below="@id/textTitle"
+        android:layout_marginTop="8dp"
+        android:scaleType="centerCrop"/>
+
+    <!-- Blog Content -->
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_below="@id/imageBlog"
+        android:text="Blog Content Goes Here"
+        android:textColor="@android:color/black"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:id="@+id/shareEditDeleteItem"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textContent"
+        android:layout_marginTop="8dp"
+        android:visibility="visible"
+        android:padding="4dp">
+
+        <!-- Share Button -->
+        <ImageButton
+            android:id="@+id/btnSharePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:src="@drawable/button_sharepost"
+            app:tint="@color/colorAccent"/>
+
+        <!-- Edit Button -->
+        <ImageButton
+            android:id="@+id/btnEditPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:textStyle="bold"
+            android:layout_toEndOf="@id/btnSharePost"
+            android:background="@android:color/transparent"
+            android:src="@drawable/edit_postt"
+            app:tint="@color/colorAccent" />
+
+        <!-- Delete Button -->
+        <ImageButton
+            android:id="@+id/btnDeletePost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_toEndOf="@id/btnEditPost"
+            android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:src="@drawable/bin_post"
+            app:tint="@color/colorAccent"/>
+
+    </RelativeLayout>
+</RelativeLayout>

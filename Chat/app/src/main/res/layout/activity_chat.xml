@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <!-- Top Action Bar -->
+    <RelativeLayout
+        android:id="@+id/actionBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="85dp"
+        android:background="@color/colorAccent"
+        android:padding="8dp">
+
+        <!-- Tumblr Button -->
+        <ImageButton
+            android:id="@+id/btnloadTumblrPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@android:color/transparent"
+            android:textStyle="bold"
+            android:src="@drawable/ic_tumblr_sharebtn"
+            app:tint="@color/white" />
+
+        <!-- Friend's Username -->
+        <TextView
+            android:id="@+id/textViewFriendUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Friend's Username"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_toStartOf="@+id/btnloadTumblrPost"/>
+
+        <!-- Search Bar and Search Button -->
+        <RelativeLayout
+            android:id="@+id/searchBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewFriendUsername"
+            android:layout_marginTop="8dp">
+
+            <EditText
+                android:id="@+id/editTextSearchFind"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/edittext_border"
+                android:hint="Find a message..."
+                android:padding="8dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="14sp"/>
+
+            <!-- Search and Delete Buttons -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/editTextSearchFind"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true">
+
+                <ImageButton
+                    android:id="@+id/buttonSearchMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="4dp"
+                    android:layout_marginRight="-15dp"
+                    android:layout_marginTop="-5dp"
+                    android:src="@android:drawable/ic_menu_search"
+                    app:tint="@color/white" />
+
+                <ImageButton
+                    android:id="@+id/buttonDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/delete_ic"
+                    android:onClick="onDeleteMessageButtonClick"
+                    android:backgroundTint="@android:color/white"
+                    android:layout_below="@id/editTextSearchFind" />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ListView
+        android:id="@+id/listViewChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@+id/messageInputLayout"
+        android:layout_below="@+id/actionBarLayout"
+        android:dividerHeight="1dp"
+        android:divider="@android:color/transparent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:layout_marginTop="8dp" />
+
+    <RelativeLayout
+        android:id="@+id/messageInputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <!-- Add Image Attach Button -->
+        <ImageButton
+            android:id="@+id/buttonAttachImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/ic_image_choose"
+            app:tint="@color/colorAccent" />
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/buttonAttachImage"
+            android:layout_toStartOf="@+id/buttonSend"
+            android:hint="Type your message"
+            android:inputType="textMultiLine"
+            android:backgroundTint="@color/black"
+            android:maxLines="3"
+            android:padding="8dp" />
+
+        <!-- Send Button -->
+        <ImageButton
+            android:id="@+id/buttonSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_send"
+            app:tint="@color/colorAccent" />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<!-- item_friend.xml -->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/rounded_background">
+
+    <TextView
+        android:id="@+id/textViewFriendUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Friend's Username"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="8dp" />
+
+    <ImageView
+        android:id="@+id/newMessageIndicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/ic_notification"
+        android:visibility="gone" />
+</LinearLayout>

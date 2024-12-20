@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorAccent">#00991C</color>
+    <color name="pink_border">#F7B3CA</color>
+    <color name="pinkTopic">#FE4080</color>
+    <color name="greyBack">#8B8B8B</color>
+    <color name="greyLow">#CCCCCC</color>
+    <color name="purpleCol">#8C6E96</color>
+    <color name="colorAccentLow">#E6A8D9</color>
+    <color name="purpleColLow">#C4AFCC</color>
+
+    <!-- Background Colors -->
+    <color name="lightBackground">#FFFFFF</color>
+
+    <!-- Text Colors -->
+    <color name="darkText">#333333</color>
+    <color name="lightText">#FFFFFF</color>
+
+    <!-- Button and Primary Color -->
+    <color name="primaryColor">#3498db</color>
+</resources>
